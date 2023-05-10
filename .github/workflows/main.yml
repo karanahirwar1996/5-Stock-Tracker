@@ -25,4 +25,4 @@ jobs:
         run: pip install pandas gspread oauth2client
 
       - name: Run Python code
-        run: python 5%+ Stock Tracker.py
+        run: python 5_Plus_Stock_Tracker.py
