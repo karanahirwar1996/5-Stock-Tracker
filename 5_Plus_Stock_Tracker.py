@@ -85,7 +85,7 @@ def stock_details(url):
         else:
             news_df = pd.DataFrame(columns=['headline', 'date', 'link'])
         sender_email = "karan.ahirwar1996@gmail.com"
-        receiver_email = ["anitaahirwar2112@gmail.com",sender_email,"ahirwarr22@gmail.com"]
+        receiver_email = ["anitaahirwar2112@gmail.com",sender_email,"ahirwarr22@gmail.com","lokesh1999sunhare@gmail.com"]
         password = "uccrgtqdnusrpmnk"
 
         table_html = Plus_5[['Name','Price','Day Return','New_URL']].to_html(index=False)
