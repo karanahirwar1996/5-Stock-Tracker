@@ -1,4 +1,4 @@
-name: Python CI
+name: Stock Tracker CI
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
           python-version: 3.x  # Change this to your desired Python version
 
       - name: Install dependencies
-        run: pip install pandas gspread oauth2client
+        run: pip install pandas gspread oauth2client beautifulsoup4
 
       - name: Run Python code
         run: python 5_Plus_Stock_Tracker.py
