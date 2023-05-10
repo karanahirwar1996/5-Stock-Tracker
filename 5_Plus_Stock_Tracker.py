@@ -101,7 +101,7 @@ def stock_details(url):
 
         message["Subject"] = "Stock Details"
         message["From"] = sender_email
-        message["To"] = ", ".join(receiver_emails)
+        message["To"] = ", ".join(receiver_email)
 
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
             server.login(sender_email, password)
