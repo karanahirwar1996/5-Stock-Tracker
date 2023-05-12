@@ -91,7 +91,7 @@ def stock_details(url):
         table_html = Plus_5[['Name','Price','Day Return','New_URL']].to_html(index=False)
 
         message = MIMEText(f"I hope this email finds you well. I am writing to inform you about a recent development regarding stocks. \
-        As of today, the day change for some of stocks has exceeded 5%. The details are as follows: \
+        As of today, the day change for some of stocks has exceeded 10%. The details are as follows: \
         <br><br>{table_html} \
         <br>In addition to this, I would like to bring your attention to some relevant news articles related to these stocks: \
         <br><br>{news_df.to_html(index=False) if news is not None else 'No news available'} \
