@@ -70,7 +70,7 @@ def stock_details(url):
     data = {'Date': date_today, 'Name': name, 'ISIN': isin, 'Sector': sector, '52 Week High': _52whigh, '52 Week Low': _52wlow, 'Market Cap': mc,\
             'Market Cap Label': label, 'P/E Ratio': pe, 'Day Return': change,'Week Return': wk, 'Return on Equity': roe, 'Price': price, 'Low': l, 'High': h,"URL":url}
     df = pd.DataFrame(data, index=[0])
-    Plus_5=df.loc[(df['Day Return']>5)&(df['Price']<2000)]
+    Plus_5=df.loc[(df['Day Return']>10)&(df['Price']<2000)]
     Plus_5['New_URL']=Plus_5['URL'].apply(short_link)
     if len(Plus_5)>0:
     # send email
@@ -85,7 +85,7 @@ def stock_details(url):
         else:
             news_df = pd.DataFrame(columns=['headline', 'date', 'link'])
         sender_email = "karan.ahirwar1996@gmail.com"
-        receiver_email = ["anitaahirwar2112@gmail.com",sender_email,"ahirwarr22@gmail.com","lokesh1999sunhare@gmail.com"]
+        receiver_email = ["anitaahirwar2112@gmail.com",sender_email,"lokesh1999sunhare@gmail.com"]
         password = "uccrgtqdnusrpmnk"
 
         table_html = Plus_5[['Name','Price','Day Return','New_URL']].to_html(index=False)
